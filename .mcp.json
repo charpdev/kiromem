@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "kiro-mem": {
+      "command": "node",
+      "args": ["./dist/index.js"]
+    }
+  }
+}

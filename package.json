@@ -1,0 +1,21 @@
+{
+  "name": "kiro-mem",
+  "version": "1.0.0",
+  "description": "MCP server for storing contexts across Kiro sessions",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc && node dist/index.js",
+    "install-mcp": "./install.sh",
+    "uninstall-mcp": "./uninstall.sh"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.25.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
+  }
+}

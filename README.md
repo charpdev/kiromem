@@ -76,6 +76,7 @@ Verify the MCP server is loaded:
 Available tools:
 - `store_context` - Store information for future sessions
 - `auto_store_session` - Automatically store current conversation context
+- `restore_session` - Restore context from previous sessions
 - `retrieve_context` - Search stored contexts by key or tags  
 - `list_contexts` - View all stored contexts
 - `delete_context` - Remove stored contexts
@@ -92,6 +93,11 @@ Store context information for future sessions.
 Automatically store current conversation context.
 - `session_id` (optional): Session identifier (auto-generated if not provided)
 - `tags` (optional): Array of tags for categorization
+
+### restore_session
+Restore context from previous sessions.
+- `session_id` (optional): Specific session to restore
+- `limit` (optional): Number of recent sessions to show (default: 5)
 
 ### retrieve_context
 Retrieve stored context by key or search by tags.
@@ -140,7 +146,7 @@ kiro-cli chat
 
 # Auto-storage (happens automatically after each response)
 # Check auto-captured sessions
-> Use auto_store_session with tags ["important"]
+> Use restore_session to see recent auto-captured sessions
 
 # Retrieve contexts
 > Use retrieve_context with tags ["setup", "project"]

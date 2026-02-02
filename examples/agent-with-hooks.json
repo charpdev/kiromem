@@ -1,0 +1,17 @@
+{
+  "description": "Agent with kiro-mem MCP server and auto-storage hooks",
+  "mcpServers": {
+    "kiro-mem": {
+      "command": "node",
+      "args": ["/mnt/c/src/code/kiroMem/dist/index.js"]
+    }
+  },
+  "allowedTools": ["@kiro-mem/*"],
+  "hooks": [
+    {
+      "event": "Stop",
+      "command": "/mnt/c/src/code/kiroMem/hooks/auto-store.sh",
+      "description": "Auto-store session context after each response"
+    }
+  ]
+}
